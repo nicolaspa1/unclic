@@ -12,75 +12,61 @@ const features = [
   {
     icon: LayoutGrid,
     title: "Colecciones",
-    description:
-      "Agrupa tus productos por temas, estilos o categorías para que tus clientes naveguen fácil y encuentren lo que buscan.",
-    color: "bg-amber-50",
+    description: "Agrupa productos por categorías para que tus clientes encuentren lo que buscan.",
   },
   {
     icon: Play,
     title: "Shoppable videos",
-    description:
-      "Muestra tus productos en acción y deja que te compren directo desde el video. Puedes traer fácilmente tus Reels desde Instagram.",
-    color: "bg-rose-50",
+    description: "Muestra productos en acción. Importa tus Reels y permite compras directas.",
   },
   {
     icon: CreditCard,
     title: "Opciones de pago",
-    description:
-      "Acepta pagos por Mercado Pago, contra entrega o coordinando por WhatsApp, según lo que más se acomode a ti y a tus clientes.",
-    color: "bg-green-50",
+    description: "Mercado Pago, contra entrega o coordinación por WhatsApp. Tú decides.",
   },
   {
     icon: MessageCircle,
     title: "Pedidos por WhatsApp",
-    description:
-      "Recibe tus pedidos directamente a tu WhatsApp y mantén una comunicación cercana con tus clientes.",
-    color: "bg-emerald-50",
+    description: "Recibe cada pedido directo a tu WhatsApp, al instante.",
   },
   {
     icon: FileText,
-    title: "Acerca de",
-    description:
-      "Un espacio para contar tu historia, mostrar lo que haces y conectar desde lo real con las personas que te compran.",
-    color: "bg-orange-50",
+    title: "Tu historia",
+    description: "Un espacio para contar quién eres y conectar con quienes te compran.",
   },
   {
     icon: LinkIcon,
     title: "Links",
-    description:
-      "Agrega enlaces a tus redes sociales o cualquier otro contenido que quieras compartir con tus clientes.",
-    color: "bg-purple-50",
+    description: "Agrega tus redes sociales y cualquier enlace que quieras compartir.",
   },
 ];
 
 export const ServicesSection = () => {
   return (
     <section className="py-20 md:py-28">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[980px] mx-auto px-6">
         <FadeIn>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-forest">
-              Todo lo que necesitas para{" "}
-              <span className="font-display italic">tu sitio</span>
+          <div className="text-center max-w-[600px] mx-auto mb-16">
+            <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-semibold tracking-tight text-apple-black leading-[1.08]">
+              Todo lo que necesitas.
+              <br />
+              <span className="text-apple-gray">Nada que no.</span>
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
-              Permite que tus clientes vean tus productos, hagan preguntas y te
-              compren fácil, todo desde un solo lugar.
-            </p>
           </div>
         </FadeIn>
 
-        <FadeInStagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <FadeInStagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feature) => (
             <FadeInItem key={feature.title}>
-              <div className={`${feature.color} rounded-2xl p-6 h-full transition-shadow hover:shadow-md`}>
-                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm mb-4">
-                  <feature.icon className="w-5 h-5 text-forest" />
-                </div>
-                <h3 className="text-lg font-semibold text-forest mb-2">
+              <div className="group bg-apple-light rounded-2xl p-7 transition-colors hover:bg-gray-100/80">
+                <feature.icon
+                  className="w-7 h-7 text-apple-black mb-4"
+                  strokeWidth={1.5}
+                />
+                <h3 className="text-[17px] font-semibold text-apple-black mb-1.5">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-apple-gray text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>

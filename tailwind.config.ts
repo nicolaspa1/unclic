@@ -9,13 +9,12 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1200px",
+        "2xl": "1120px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        display: ["Playfair Display", "serif"],
+        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,19 +60,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        warm: {
-          50: "#FBF5EE",
-          100: "#F5EDE3",
-          200: "#EDE0D0",
-        },
-        forest: {
-          DEFAULT: "#1B3726",
-          light: "#2D5A3E",
-        },
-        orange: {
-          DEFAULT: "#E86330",
-          dark: "#D4571E",
-          light: "#F0845A",
+        apple: {
+          black: "#1D1D1F",
+          gray: "#86868B",
+          light: "#F5F5F7",
+          blue: "#0071E3",
+          "blue-hover": "#0077ED",
         },
       },
       borderRadius: {

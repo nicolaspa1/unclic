@@ -1,104 +1,62 @@
-import { FadeIn } from "@/components/FadeIn";
-import { ShoppingCart, Smartphone, DollarSign, Store } from "lucide-react";
+import { FadeIn, FadeInStagger, FadeInItem } from "@/components/FadeIn";
+import { ShoppingCart, Smartphone, DollarSign } from "lucide-react";
 
 const features = [
   {
     icon: ShoppingCart,
-    title: "Recibe pedidos desde tu propio sitio",
+    title: "Recibe pedidos al instante",
     description:
-      "Comparte tu sitio donde quieras y empieza a recibir pedidos por WhatsApp.",
+      "Comparte tu link y recibe pedidos directo por WhatsApp. Sin intermediarios.",
   },
   {
     icon: Smartphone,
-    title: "Administra todo desde tu celular",
+    title: "Gestiona desde tu celular",
     description:
-      "Crea tu link, publica productos y gestiona tu catálogo fácil desde tu celular.",
+      "Publica productos, actualiza precios y administra tu catálogo desde donde estés.",
   },
   {
     icon: DollarSign,
-    title: "0% de comisiones por venta",
+    title: "Sin comisiones",
     description:
-      "Tus ganancias son tuyas. Solo pagas el uso de la pasarela si decides activarla.",
+      "Tus ganancias son 100% tuyas. Solo pagas tu plan mensual.",
   },
 ];
 
 export const StatsSection = () => {
   return (
-    <section className="py-20 md:py-28">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="funciones" className="py-20 md:py-28">
+      <div className="max-w-[980px] mx-auto px-6">
         <FadeIn>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-forest">
-              Una ventana a todo tu{" "}
-              <span className="font-display italic">negocio</span>
+          <div className="text-center max-w-[600px] mx-auto">
+            <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-semibold tracking-tight text-apple-black leading-[1.08]">
+              Una ventana a todo
+              <br />
+              <span className="text-apple-gray">tu negocio.</span>
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
-              Lanza tu showroom online con todo lo que tu marca ofrece: catálogo,
-              colecciones, links y más. Un sitio completo donde tus clientes pueden
-              explorar y comprar con facilidad.
+            <p className="mt-4 text-apple-gray text-lg font-light leading-relaxed">
+              Tu showroom online con catálogo, colecciones y links.
+              Todo en un solo lugar.
             </p>
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <FadeIn>
-            <div className="relative">
-              <div className="bg-warm-100 rounded-3xl p-8 aspect-[4/5] flex items-center justify-center">
-                <div className="bg-white rounded-2xl shadow-md p-5 w-full max-w-xs">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-orange rounded-full" />
-                    <div>
-                      <p className="text-sm font-semibold text-forest">Tu Tienda</p>
-                      <p className="text-xs text-gray-500">tumarca.unclic.shop</p>
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Colecciones</p>
-                    <div className="grid grid-cols-3 gap-2">
-                      {[1, 2, 3].map((i) => (
-                        <div key={i} className="aspect-square bg-warm-100 rounded-lg" />
-                      ))}
-                    </div>
-                    <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mt-3">Productos</p>
-                    <div className="grid grid-cols-3 gap-2">
-                      {[4, 5, 6].map((i) => (
-                        <div key={i} className="aspect-square bg-warm-200 rounded-lg" />
-                      ))}
-                    </div>
-                  </div>
+        <FadeInStagger className="grid md:grid-cols-3 gap-6 mt-16">
+          {features.map((feature) => (
+            <FadeInItem key={feature.title}>
+              <div className="text-center p-8">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-apple-light rounded-2xl mb-5">
+                  <feature.icon className="w-6 h-6 text-apple-black" strokeWidth={1.5} />
                 </div>
+                <h3 className="text-[19px] font-semibold text-apple-black mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-apple-gray text-sm leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-3 border border-gray-100">
-                <div className="flex items-center gap-2">
-                  <Store className="w-5 h-5 text-orange" />
-                  <span className="text-xs font-medium text-forest">Probar en vivo</span>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn>
-            <div className="space-y-8">
-              {features.map((feature, i) => (
-                <div key={i} className="flex gap-4">
-                  <div className="shrink-0 w-12 h-12 bg-warm-100 rounded-xl flex items-center justify-center">
-                    <feature.icon className="w-6 h-6 text-forest" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-forest">
-                      {feature.title}
-                    </h3>
-                    <p className="mt-1 text-gray-600 text-sm leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
+            </FadeInItem>
+          ))}
+        </FadeInStagger>
       </div>
     </section>
   );

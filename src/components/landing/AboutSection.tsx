@@ -1,31 +1,24 @@
 import { FadeIn } from "@/components/FadeIn";
-import { Heart, ArrowRight } from "lucide-react";
 
 export const AboutSection = () => {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-warm-200/60 via-warm-100/40 to-white" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNlNWRkZDMiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMzYgMzRoLTJ2LTRoMnY0em0wLTE2aDJ2NGgtMnYtNHptLTQgMGgydjRoLTJ2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
-
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 md:py-28">
+      <div className="max-w-[980px] mx-auto px-6">
         <FadeIn>
-          <div className="max-w-xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-14 h-14 bg-white rounded-2xl shadow-sm mb-6">
-              <Heart className="w-7 h-7 text-orange" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-forest">
-              Sueña. Crea.{" "}
-              <span className="font-display italic">Vende.</span>
+          <div className="text-center max-w-[600px] mx-auto">
+            <h2 className="text-[40px] sm:text-[56px] lg:text-[64px] font-semibold tracking-tight text-apple-black leading-[1.05]">
+              Sueña. Crea.
+              <br />
+              <span className="text-apple-gray">Vende.</span>
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
-              Hazlo realidad ahora: crea tu link y vende hoy.
+            <p className="mt-5 text-apple-gray text-lg font-light">
+              Tu tienda online lista hoy. Sin código. Sin complicaciones.
             </p>
             <a
               href="#"
-              className="mt-8 inline-flex items-center gap-2 px-8 py-3.5 text-sm font-medium text-white bg-orange rounded-full hover:bg-orange-dark transition-colors"
+              className="mt-8 inline-flex items-center px-7 py-3 text-[17px] font-medium text-white bg-apple-blue rounded-full hover:bg-apple-blue-hover transition-colors"
             >
-              Crear link gratis
-              <ArrowRight className="w-4 h-4" />
+              Empezar gratis
             </a>
           </div>
         </FadeIn>

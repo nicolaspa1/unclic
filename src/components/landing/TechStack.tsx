@@ -1,93 +1,121 @@
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/FadeIn";
-import { Check, ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 
 const plans = [
   {
-    name: "Plan Starter",
+    name: "Starter",
     price: "17.900",
     currency: "COP",
     period: "/mes",
     features: [
       "Hasta 25 productos",
-      "Hasta 4 imágenes por producto",
+      "4 imágenes por producto",
       "Links ilimitados",
       "2 shoppable videos",
+      "Soporte por WhatsApp",
     ],
     cta: "Prueba 14 días gratis",
-    popular: false,
+    highlight: false,
   },
   {
-    name: "Plan Pro",
+    name: "Pro",
     price: "22.900",
     currency: "COP",
     period: "/mes",
     features: [
       "Productos ilimitados",
-      "Hasta 8 imágenes por producto",
+      "8 imágenes por producto",
       "Links ilimitados",
       "5 shoppable videos",
+      "Soporte prioritario",
+      "Dominio personalizado",
     ],
     cta: "Prueba 14 días gratis",
-    popular: true,
+    highlight: true,
   },
 ];
 
 export const TechStack = () => {
   return (
-    <section id="precios" className="py-20 md:py-28">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="precios" className="py-20 md:py-28 bg-apple-light">
+      <div className="max-w-[980px] mx-auto px-6">
         <FadeIn>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-forest">
-              Crece sin gastar{" "}
-              <span className="font-display italic">de más.</span>
+          <div className="text-center max-w-[600px] mx-auto mb-16">
+            <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-semibold tracking-tight text-apple-black leading-[1.08]">
+              Elige tu plan.
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
-              Mes a mes. Sin contratos largos. Sin cargos por cancelación. Elige el
-              plan que se adapte a ti y disfruta de todo lo que ofrece UnClic.
+            <p className="mt-4 text-apple-gray text-lg font-light">
+              Sin contratos. Sin cargos por cancelación. 14 días gratis.
             </p>
           </div>
         </FadeIn>
 
-        <FadeInStagger className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <FadeInStagger className="grid md:grid-cols-2 gap-5 max-w-[720px] mx-auto">
           {plans.map((plan) => (
             <FadeInItem key={plan.name}>
-              <div className="bg-white rounded-2xl border border-gray-200 p-8 relative hover:border-orange/50 transition-colors">
-                {plan.popular && (
-                  <span className="absolute -top-3 left-8 bg-orange text-white text-xs font-medium px-3 py-1 rounded-full">
-                    Popular
+              <div
+                className={`rounded-2xl p-8 ${
+                  plan.highlight
+                    ? "bg-apple-black text-white"
+                    : "bg-white border border-black/[0.08]"
+                }`}
+              >
+                <p
+                  className={`text-sm font-medium ${
+                    plan.highlight ? "text-white/60" : "text-apple-gray"
+                  }`}
+                >
+                  {plan.name}
+                </p>
+                <div className="mt-3 flex items-baseline gap-1.5">
+                  <span
+                    className={`text-xs ${
+                      plan.highlight ? "text-white/50" : "text-apple-gray"
+                    }`}
+                  >
+                    {plan.currency}
                   </span>
-                )}
-                <h3 className="text-lg font-semibold text-forest">{plan.name}</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-sm text-gray-500">{plan.currency}</span>
-                  <span className="text-4xl font-bold text-forest">{plan.price}</span>
-                  <span className="text-gray-500">{plan.period}</span>
+                  <span className="text-[40px] font-semibold tracking-tight leading-none">
+                    {plan.price}
+                  </span>
+                  <span
+                    className={`text-sm ${
+                      plan.highlight ? "text-white/50" : "text-apple-gray"
+                    }`}
+                  >
+                    {plan.period}
+                  </span>
                 </div>
 
                 <a
                   href="#"
-                  className="mt-6 flex items-center justify-center gap-2 w-full py-3 px-6 text-sm font-medium text-white bg-orange rounded-full hover:bg-orange-dark transition-colors"
+                  className={`mt-6 flex items-center justify-center w-full py-3 text-[15px] font-medium rounded-xl transition-colors ${
+                    plan.highlight
+                      ? "bg-apple-blue text-white hover:bg-apple-blue-hover"
+                      : "bg-apple-blue text-white hover:bg-apple-blue-hover"
+                  }`}
                 >
                   {plan.cta}
-                  <ArrowRight className="w-4 h-4" />
                 </a>
 
                 <ul className="mt-8 space-y-3">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-3 text-sm text-gray-600">
-                      <Check className="w-4 h-4 text-orange shrink-0" />
+                    <li
+                      key={feature}
+                      className={`flex items-center gap-3 text-sm ${
+                        plan.highlight ? "text-white/80" : "text-apple-gray"
+                      }`}
+                    >
+                      <Check
+                        className={`w-4 h-4 shrink-0 ${
+                          plan.highlight ? "text-apple-blue" : "text-apple-blue"
+                        }`}
+                        strokeWidth={2}
+                      />
                       {feature}
                     </li>
                   ))}
                 </ul>
-
-                <a
-                  href="#"
-                  className="mt-6 inline-flex items-center text-sm text-orange hover:text-orange-dark font-medium"
-                >
-                  Ver todas las características
-                </a>
               </div>
             </FadeInItem>
           ))}
