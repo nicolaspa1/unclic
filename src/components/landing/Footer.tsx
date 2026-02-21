@@ -1,13 +1,12 @@
 import { Instagram } from "lucide-react";
+import { Logo } from "./Logo";
 
 export const Footer = () => {
   return (
     <footer className="bg-uc-black text-white">
       <div className="max-w-[1040px] mx-auto px-6 py-14">
         <div className="flex flex-col items-center text-center">
-          <a href="#" className="font-serif text-xl font-semibold tracking-tight mb-8">
-            unclic
-          </a>
+          <Logo dark className="mb-8" />
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-[13px] text-white/50 mb-3">
             <a href="#funciones" className="hover:text-white transition-colors">Funciones</a>

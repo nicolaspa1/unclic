@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Logo } from "./Logo";
 
 const navLinks = [
   { label: "Funciones", href: "#funciones" },
@@ -15,9 +16,7 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl backdrop-saturate-150 border-b border-uc-black/[0.04]">
       <div className="max-w-[1040px] mx-auto px-6">
         <div className="flex items-center justify-between h-14">
-          <a href="#" className="font-serif text-xl font-semibold text-uc-black">
-            unclic
-          </a>
+          <Logo />
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -37,9 +36,9 @@ export const Navbar = () => {
             </a>
             <a
               href="#"
-              className="inline-flex items-center px-5 py-2 text-[13px] font-medium text-white bg-uc-coral rounded-full hover:bg-uc-coral-dark transition-colors"
+              className="inline-flex items-center px-5 py-2 text-[13px] font-medium text-white bg-uc-violet rounded-full hover:bg-uc-violet-dark transition-colors"
             >
-              Crear link gratis
+              Empieza gratis
             </a>
           </div>
 
@@ -78,9 +77,9 @@ export const Navbar = () => {
                 </a>
                 <a
                   href="#"
-                  className="block text-center px-5 py-2.5 text-[15px] font-medium text-white bg-uc-coral rounded-full"
+                  className="block text-center px-5 py-2.5 text-[15px] font-medium text-white bg-uc-violet rounded-full"
                 >
-                  Crear link gratis
+                  Empieza gratis
                 </a>
               </div>
             </div>

@@ -12,44 +12,44 @@ const features = [
   {
     icon: LayoutGrid,
     title: "Colecciones",
-    description: "Agrupa productos por categorías para que tus clientes naveguen fácil.",
-    bg: "bg-amber-50",
-    iconBg: "bg-amber-100",
+    description: "Organiza tus productos como una tienda real. Por estilo, temporada o lo que imagines.",
+    bg: "bg-violet-50",
+    iconBg: "bg-violet-100",
   },
   {
     icon: Play,
-    title: "Shoppable videos",
-    description: "Muestra productos en acción. Importa tus Reels y permite compras directas.",
+    title: "Videos que venden",
+    description: "Tus Reels de Instagram se convierten en escaparate. La gente ve, le gusta y compra.",
     bg: "bg-rose-50",
     iconBg: "bg-rose-100",
   },
   {
     icon: CreditCard,
-    title: "Opciones de pago",
-    description: "Mercado Pago, contra entrega o WhatsApp. Tú decides cómo cobrar.",
+    title: "Cobra como prefieras",
+    description: "Transferencia, Mercado Pago, contra entrega... activa lo que te funcione mejor.",
     bg: "bg-emerald-50",
     iconBg: "bg-emerald-100",
   },
   {
     icon: MessageCircle,
-    title: "Pedidos por WhatsApp",
-    description: "Cada pedido llega directo a tu WhatsApp, al instante.",
+    title: "WhatsApp como canal",
+    description: "Cada compra se convierte en una conversación. Así vendes: cercano y directo.",
     bg: "bg-green-50",
     iconBg: "bg-green-100",
   },
   {
     icon: FileText,
-    title: "Tu historia",
-    description: "Cuenta quién eres y conecta con las personas que te compran.",
-    bg: "bg-sky-50",
-    iconBg: "bg-sky-100",
+    title: "Cuenta tu historia",
+    description: "La gente compra de personas, no de páginas. Muestra quién está detrás.",
+    bg: "bg-amber-50",
+    iconBg: "bg-amber-100",
   },
   {
     icon: LinkIcon,
-    title: "Links",
-    description: "Agrega tus redes sociales y cualquier enlace que quieras compartir.",
-    bg: "bg-violet-50",
-    iconBg: "bg-violet-100",
+    title: "Todos tus links",
+    description: "Instagram, TikTok, YouTube, lo que sea. Todo vive junto en un solo lugar.",
+    bg: "bg-sky-50",
+    iconBg: "bg-sky-100",
   },
 ];
 
@@ -60,12 +60,12 @@ export const ServicesSection = () => {
         <FadeIn>
           <div className="text-center max-w-[580px] mx-auto mb-16">
             <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-semibold tracking-tight text-uc-black leading-[1.08]">
-              Todo lo que necesitas para{" "}
-              <span className="font-serif italic text-uc-coral">tu sitio.</span>
+              Funciones que impulsan{" "}
+              <span className="font-serif italic text-uc-violet">tus ventas.</span>
             </h2>
             <p className="mt-4 text-uc-gray text-[17px] leading-relaxed">
-              Que tus clientes vean tus productos, pregunten y te compren fácil.
-              Todo desde un solo lugar.
+              Cada herramienta pensada para que vendas más
+              y tus clientes compren más fácil.
             </p>
           </div>
         </FadeIn>

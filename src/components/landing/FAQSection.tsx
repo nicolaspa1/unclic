@@ -9,34 +9,34 @@ import {
 
 const faqs = [
   {
-    question: "¿Necesito saber programar?",
+    question: "¿Necesito saber de tecnología?",
     answer:
-      "No. UnClic está diseñado para que crees y administres tu sitio en minutos, directamente desde tu celular. No necesitas conocimientos técnicos.",
+      "Para nada. Si sabes subir una foto a Instagram, sabes usar UnClic. Todo se hace desde el celular, sin tocar una línea de código.",
   },
   {
-    question: "¿Cobran comisiones por venta?",
+    question: "¿Se quedan con parte de mis ventas?",
     answer:
-      "No. El 100% de tus ventas son tuyas. Solo pagas tu plan mensual y, si la activas, el costo de la pasarela de pagos.",
+      "Nunca. No cobramos comisiones por venta. Pagas un plan fijo mensual y listo. Si activas una pasarela de pago, el costo de la pasarela corre aparte.",
   },
   {
-    question: "¿Puedo usar mi propio dominio?",
+    question: "¿Puedo usar mi dominio propio?",
     answer:
-      "Sí. Puedes conectar tu dominio personalizado para darle un aspecto más profesional a tu tienda.",
+      "Claro. Conectas tunegocio.com en un par de clics y tu tienda se ve totalmente profesional bajo tu marca.",
   },
   {
-    question: "¿Cómo recibo los pagos?",
+    question: "¿Cómo me pagan mis clientes?",
     answer:
-      "Puedes activar Mercado Pago o Stripe para pagos automáticos, o coordinar pagos contra entrega y por WhatsApp.",
+      "Como prefieras: podés activar Mercado Pago o Stripe para cobro automático, o simplemente coordinar el pago por WhatsApp o contra entrega.",
   },
   {
-    question: "¿Cómo funciona la prueba gratuita?",
+    question: "¿Qué pasa después de los 14 días gratis?",
     answer:
-      "Tienes 14 días para probar todas las funcionalidades sin tarjeta de crédito. Al terminar, eliges tu plan.",
+      "Eliges tu plan y seguís vendiendo. No pedimos tarjeta para la prueba, así que no hay cargos sorpresa. Si no te convence, simplemente no continúas.",
   },
   {
-    question: "¿Tienen garantía de reembolso?",
+    question: "¿Y si no me gusta después de pagar?",
     answer:
-      "Sí. Dentro de los primeros 30 días desde tu primer pago puedes solicitar el reembolso completo del 100%.",
+      "Tienes 30 días desde tu primer pago para pedir el reembolso completo. Sin preguntas, sin vueltas.",
   },
 ];
 
@@ -48,11 +48,11 @@ export const FAQSection = () => {
           <div className="lg:col-span-2">
             <FadeIn>
               <h2 className="text-[32px] sm:text-[40px] font-semibold tracking-tight text-uc-black leading-[1.08]">
-                Preguntas{" "}
-                <span className="font-serif italic text-uc-coral">frecuentes.</span>
+                ¿Dudas?{" "}
+                <span className="font-serif italic text-uc-violet">Normal.</span>
               </h2>
               <p className="mt-4 text-uc-gray text-[15px] leading-relaxed">
-                ¿Tienes más preguntas? Escríbenos y lo resolvemos juntos.
+                Si no encuentras tu respuesta acá, escríbenos. Contestamos rápido y en español.
               </p>
               <a
                 href="https://wa.me/573332430037"

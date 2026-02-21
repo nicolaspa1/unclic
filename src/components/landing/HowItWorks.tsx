@@ -5,20 +5,20 @@ const steps = [
   {
     number: "1",
     icon: LinkIcon,
-    title: "Elige tu link",
-    description: "Escoge un nombre para tu enlace o conecta tu propio dominio personalizado.",
+    title: "Reclama tu nombre",
+    description: "Elige un nombre que represente tu marca. También puedes usar tu propio dominio.",
   },
   {
     number: "2",
     icon: Package,
-    title: "Agrega tu catálogo",
-    description: "Sube tus productos con fotos, precios y descripciones. Organízalos en colecciones.",
+    title: "Sube lo que vendes",
+    description: "Fotos, precios, descripciones. Arrastra, suelta y organiza como quieras.",
   },
   {
     number: "3",
     icon: Send,
-    title: "Comparte y vende",
-    description: "Compártelo en tus redes y recibe pedidos directamente por WhatsApp.",
+    title: "Lanza al mundo",
+    description: "Pega tu link en bio, stories o donde quieras. Los pedidos llegan solos.",
   },
 ];
 
@@ -29,12 +29,12 @@ export const HowItWorks = () => {
         <FadeIn>
           <div className="text-center max-w-[580px] mx-auto mb-16">
             <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-semibold tracking-tight text-uc-black leading-[1.08]">
-              Tu sitio listo en{" "}
-              <span className="font-serif italic text-uc-coral">minutos.</span>
+              De cero a vendiendo en{" "}
+              <span className="font-serif italic text-uc-violet">tres pasos.</span>
             </h2>
             <p className="mt-4 text-uc-gray text-[17px] leading-relaxed">
-              Sin esperar diseñadores ni programadores. Lo haces tú,
-              paso a paso, desde tu celular.
+              No necesitas a nadie. Solo tu celular, tus productos
+              y cinco minutos de tu tiempo.
             </p>
           </div>
         </FadeIn>
@@ -44,7 +44,7 @@ export const HowItWorks = () => {
             <FadeInItem key={step.number}>
               <div className="relative bg-white rounded-2xl p-8 border border-uc-black/[0.04]">
                 <div className="flex items-center gap-3 mb-5">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-uc-coral text-white text-sm font-semibold">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-uc-violet text-white text-sm font-semibold">
                     {step.number}
                   </span>
                   <step.icon className="w-5 h-5 text-uc-gray-light" strokeWidth={1.5} />

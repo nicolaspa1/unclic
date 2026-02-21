@@ -14,7 +14,7 @@ const plans = [
       "2 shoppable videos",
       "Soporte por WhatsApp",
     ],
-    cta: "Prueba 14 días gratis",
+    cta: "Empezar gratis",
     dark: false,
   },
   {
@@ -22,16 +22,16 @@ const plans = [
     price: "22.900",
     currency: "COP",
     period: "/mes",
-    badge: "Más popular",
+    badge: "Recomendado",
     features: [
-      "Productos ilimitados",
+      "Productos sin límite",
       "8 imágenes por producto",
       "Links ilimitados",
-      "5 shoppable videos",
+      "5 videos comprables",
       "Soporte prioritario",
-      "Dominio personalizado",
+      "Tu propio dominio",
     ],
-    cta: "Prueba 14 días gratis",
+    cta: "Empezar gratis",
     dark: true,
   },
 ];
@@ -43,11 +43,11 @@ export const TechStack = () => {
         <FadeIn>
           <div className="text-center max-w-[580px] mx-auto mb-16">
             <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-semibold tracking-tight text-uc-black leading-[1.08]">
-              Crece sin gastar{" "}
-              <span className="font-serif italic text-uc-coral">de más.</span>
+              Precios simples.{" "}
+              <span className="font-serif italic text-uc-violet">Sin sorpresas.</span>
             </h2>
             <p className="mt-4 text-uc-gray text-[17px] leading-relaxed">
-              Sin contratos. Sin cargos por cancelación. 14 días gratis para probar todo.
+              Mes a mes, cancela cuando quieras. Prueba todo gratis por 14 días sin dejar tarjeta.
             </p>
           </div>
         </FadeIn>
@@ -63,7 +63,7 @@ export const TechStack = () => {
                 }`}
               >
                 {plan.badge && (
-                  <span className="absolute -top-3 left-8 bg-uc-coral text-white text-[11px] font-semibold px-3 py-1 rounded-full">
+                  <span className="absolute -top-3 left-8 bg-uc-violet text-white text-[11px] font-semibold px-3 py-1 rounded-full">
                     {plan.badge}
                   </span>
                 )}
@@ -88,7 +88,7 @@ export const TechStack = () => {
                   href="#"
                   className={`mt-7 flex items-center justify-center gap-2 w-full py-3 text-[15px] font-medium rounded-xl transition-colors ${
                     plan.dark
-                      ? "bg-uc-coral text-white hover:bg-uc-coral-dark"
+                      ? "bg-uc-violet text-white hover:bg-uc-violet-dark"
                       : "bg-uc-black text-white hover:bg-uc-dark"
                   }`}
                 >
@@ -105,7 +105,7 @@ export const TechStack = () => {
                       }`}
                     >
                       <Check
-                        className={`w-4 h-4 shrink-0 ${plan.dark ? "text-uc-coral" : "text-uc-coral"}`}
+                        className="w-4 h-4 shrink-0 text-uc-violet"
                         strokeWidth={2}
                       />
                       {feature}

@@ -4,21 +4,18 @@ import { ShoppingCart, Smartphone, DollarSign } from "lucide-react";
 const features = [
   {
     icon: ShoppingCart,
-    title: "Recibe pedidos al instante",
-    description:
-      "Comparte tu link donde quieras y recibe cada pedido directo a tu WhatsApp.",
+    title: "Ventas sin intermediarios",
+    description: "Tu cliente ve, elige y te escribe. Sin carritos abandonados ni procesos largos.",
   },
   {
     icon: Smartphone,
-    title: "Gestiona desde tu celular",
-    description:
-      "Publica productos, actualiza precios y administra todo desde tu teléfono.",
+    title: "Control total desde el bolsillo",
+    description: "Sube productos, cambia precios, revisa pedidos. Todo desde tu celular, donde estés.",
   },
   {
     icon: DollarSign,
-    title: "0% de comisiones",
-    description:
-      "Tus ganancias son 100% tuyas. Solo pagas tu plan mensual, nada más.",
+    title: "Cada peso es tuyo",
+    description: "No tocamos tus ventas. Sin comisiones ocultas, sin porcentajes, sin letra pequeña.",
   },
 ];
 
@@ -29,12 +26,12 @@ export const StatsSection = () => {
         <FadeIn>
           <div className="text-center max-w-[580px] mx-auto mb-16">
             <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-semibold tracking-tight text-uc-black leading-[1.08]">
-              Una ventana a todo{" "}
-              <span className="font-serif italic text-uc-coral">tu negocio.</span>
+              Tu marca, tu espacio,{" "}
+              <span className="font-serif italic text-uc-violet">tus reglas.</span>
             </h2>
             <p className="mt-4 text-uc-gray text-[17px] leading-relaxed">
-              Tu showroom online con catálogo, colecciones y links.
-              Un sitio completo donde tus clientes exploran y compran fácil.
+              Un espacio propio para mostrar lo que haces, con tu estilo.
+              Catálogo, colecciones, links — todo donde tus clientes te encuentran.
             </p>
           </div>
         </FadeIn>
@@ -44,7 +41,7 @@ export const StatsSection = () => {
             <FadeInItem key={feature.title}>
               <div className="bg-uc-warm rounded-2xl p-8 hover:bg-uc-warm-mid transition-colors">
                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm mb-5">
-                  <feature.icon className="w-5 h-5 text-uc-coral" strokeWidth={1.5} />
+                  <feature.icon className="w-5 h-5 text-uc-violet" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-[18px] font-semibold text-uc-black mb-2">
                   {feature.title}

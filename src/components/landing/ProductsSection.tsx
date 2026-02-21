@@ -23,28 +23,28 @@ import {
 } from "lucide-react";
 
 const trustItems = [
-  { icon: Headphones, title: "Soporte por WhatsApp", description: "Un equipo real que responde rápido." },
-  { icon: DollarSign, title: "Garantía de reembolso", description: "30 días para pedir tu 100% de vuelta." },
-  { icon: Shield, title: "Pagos seguros con SSL", description: "Encriptación de máxima seguridad." },
+  { icon: Headphones, title: "Soporte humano", description: "Te responde gente real, por WhatsApp, en minutos." },
+  { icon: DollarSign, title: "30 días de garantía", description: "No te convence, te devolvemos todo. Sin preguntas." },
+  { icon: Shield, title: "Transacciones protegidas", description: "Certificado SSL incluido. Tu dinero y datos, seguros." },
 ];
 
 const allFeatures = [
-  { icon: ShoppingBag, title: "Catálogo virtual", description: "Productos ilimitados, hasta 8 fotos cada uno." },
-  { icon: LayoutGrid, title: "Colecciones", description: "Agrupa y organiza tu catálogo." },
-  { icon: Play, title: "Shoppable videos", description: "Videos con compra directa." },
-  { icon: Globe, title: "Links ilimitados", description: "Todos los enlaces que necesites." },
-  { icon: Globe, title: "Dominio propio", description: "Conecta tu dominio personalizado." },
-  { icon: Lock, title: "SSL gratuito", description: "Seguridad incluida sin costo." },
-  { icon: Smartphone, title: "Diseño mobile-first", description: "Perfecto en cualquier dispositivo." },
-  { icon: QrCode, title: "Código QR", description: "Del mundo físico a tu tienda online." },
-  { icon: Instagram, title: "Importa de Instagram", description: "Trae reels y fotos a tu sitio." },
-  { icon: FileSpreadsheet, title: "Carga masiva", description: "Importa desde archivos .xls." },
-  { icon: DollarSign, title: "0% comisiones", description: "Lo que vendes es 100% tuyo." },
-  { icon: Search, title: "SEO optimizado", description: "Fácil de encontrar en Google." },
-  { icon: CreditCard, title: "Pagos manuales", description: "Contra entrega o coordinación." },
-  { icon: Zap, title: "Pagos automáticos", description: "Stripe, Mercado Pago y más." },
-  { icon: BarChart3, title: "Analíticas", description: "Insights de tu rendimiento." },
-  { icon: Target, title: "Pixel Meta/TikTok", description: "Mide tus anuncios con precisión." },
+  { icon: ShoppingBag, title: "Catálogo completo", description: "Sube todo lo que vendes con hasta 8 fotos por producto." },
+  { icon: LayoutGrid, title: "Colecciones", description: "Clasifica por categoría, estilo o temporada." },
+  { icon: Play, title: "Videos comprables", description: "De verlo a comprarlo en un toque." },
+  { icon: Globe, title: "Links sin límite", description: "Agrega cuantos enlaces necesites." },
+  { icon: Globe, title: "Tu dominio", description: "Usa tunombre.com para más credibilidad." },
+  { icon: Lock, title: "SSL incluido", description: "Candadito verde gratis, siempre." },
+  { icon: Smartphone, title: "Pensado para el celular", description: "Se ve perfecto en cualquier pantalla." },
+  { icon: QrCode, title: "Código QR", description: "Lleva clientes del mundo real a tu tienda." },
+  { icon: Instagram, title: "Conexión con Instagram", description: "Trae tus reels y fotos en un clic." },
+  { icon: FileSpreadsheet, title: "Carga masiva", description: "Muchos productos? Súbelos desde Excel." },
+  { icon: DollarSign, title: "Cero comisiones", description: "Vendiste $100, te quedas con $100." },
+  { icon: Search, title: "SEO listo", description: "Que te encuentren buscando en Google." },
+  { icon: CreditCard, title: "Pagos flexibles", description: "Efectivo, transferencia, como acuerden." },
+  { icon: Zap, title: "Cobro automático", description: "Stripe y Mercado Pago integrados." },
+  { icon: BarChart3, title: "Métricas claras", description: "Entiende qué funciona y qué mejorar." },
+  { icon: Target, title: "Pixels de tracking", description: "Conecta Meta y TikTok Ads fácil." },
 ];
 
 export const ProductsSection = () => {
@@ -57,9 +57,9 @@ export const ProductsSection = () => {
         <FadeIn>
           <div className="grid md:grid-cols-3 gap-6 mb-20">
             {trustItems.map((item) => (
-              <div key={item.title} className="flex items-start gap-4 p-6 bg-uc-coral-soft rounded-2xl">
+              <div key={item.title} className="flex items-start gap-4 p-6 bg-uc-violet-soft rounded-2xl">
                 <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm shrink-0">
-                  <item.icon className="w-5 h-5 text-uc-coral" strokeWidth={1.5} />
+                  <item.icon className="w-5 h-5 text-uc-violet" strokeWidth={1.5} />
                 </div>
                 <div>
                   <h3 className="text-[15px] font-semibold text-uc-black">{item.title}</h3>
@@ -73,10 +73,10 @@ export const ProductsSection = () => {
         <FadeIn>
           <div className="text-center max-w-[580px] mx-auto mb-14">
             <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-semibold tracking-tight text-uc-black leading-[1.08]">
-              Incluye{" "}
-              <span className="font-serif italic text-uc-coral">todo.</span>
+              Hecho para que vendas{" "}
+              <span className="font-serif italic text-uc-violet">más.</span>
             </h2>
-            <p className="mt-2 text-uc-gray text-[17px]">Y mucho más en camino.</p>
+            <p className="mt-2 text-uc-gray text-[17px]">Todo incluido. Y seguimos sumando.</p>
           </div>
         </FadeIn>
 
@@ -84,7 +84,7 @@ export const ProductsSection = () => {
           {visible.map((f, i) => (
             <FadeInItem key={`${f.title}-${i}`}>
               <div className="border border-uc-black/[0.06] rounded-2xl p-5 hover:bg-uc-warm transition-colors group">
-                <f.icon className="w-5 h-5 text-uc-black mb-3 group-hover:text-uc-coral transition-colors" strokeWidth={1.5} />
+                <f.icon className="w-5 h-5 text-uc-black mb-3 group-hover:text-uc-violet transition-colors" strokeWidth={1.5} />
                 <h4 className="text-[14px] font-semibold text-uc-black mb-0.5">{f.title}</h4>
                 <p className="text-[12px] text-uc-gray leading-relaxed">{f.description}</p>
               </div>
@@ -96,7 +96,7 @@ export const ProductsSection = () => {
           <div className="text-center mt-8">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="inline-flex items-center gap-1.5 text-uc-coral text-[14px] font-medium hover:text-uc-coral-dark transition-colors"
+              className="inline-flex items-center gap-1.5 text-uc-violet text-[14px] font-medium hover:text-uc-violet-dark transition-colors"
             >
               {expanded ? (
                 <>Ver menos <ChevronUp className="w-4 h-4" /></>

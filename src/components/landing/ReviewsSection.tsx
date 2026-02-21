@@ -3,31 +3,31 @@ import { ExternalLink } from "lucide-react";
 
 const reviews = [
   {
-    name: "Luz Prada",
-    role: "Creadora de @notiz",
+    name: "Valentina Ríos",
+    role: "Fundadora de @vale.accesorios",
     quote:
-      "En una tarde subí todo mi catálogo y empecé a vender. La mejor inversión que he hecho para mi emprendimiento.",
-    initials: "LP",
-    bg: "bg-amber-100",
-    text: "text-amber-700",
+      "Antes mandaba fotos por WhatsApp una por una. Ahora mando un link y mis clientes eligen solos. Me ahorré horas al día.",
+    initials: "VR",
+    bg: "bg-violet-100",
+    text: "text-violet-700",
   },
   {
-    name: "Lucía Mederos",
-    role: "Creadora de @universo-lume",
+    name: "Andrés Moreno",
+    role: "Creador de @andres.leather",
     quote:
-      "Era la solución que necesitaba. La idea del micrositio es genial ya que una página web suele ser muy costosa y UnClic te da esa posibilidad.",
-    initials: "LM",
+      "Pensé que necesitaba una web profesional para vender en serio. UnClic me dio eso en una tarde y por una fracción del costo.",
+    initials: "AM",
     bg: "bg-rose-100",
     text: "text-rose-700",
   },
   {
-    name: "Camilo Restrepo",
-    role: "Emprendedor",
+    name: "Daniela Ospina",
+    role: "Dueña de @dani.postres",
     quote:
-      "Mis clientes ahora ven todo mi catálogo y hacen pedidos sin que yo tenga que mandar fotos una por una. Un cambio total.",
-    initials: "CR",
-    bg: "bg-sky-100",
-    text: "text-sky-700",
+      "Lo que más me gusta es que los pedidos llegan directo a mi WhatsApp con todo detallado. No tengo que preguntar nada, solo confirmar.",
+    initials: "DO",
+    bg: "bg-amber-100",
+    text: "text-amber-700",
   },
 ];
 
@@ -38,11 +38,11 @@ export const ReviewsSection = () => {
         <FadeIn>
           <div className="text-center max-w-[580px] mx-auto mb-16">
             <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-semibold tracking-tight text-uc-black leading-[1.08]">
-              Ya miles venden con{" "}
-              <span className="font-serif italic text-uc-coral">UnClic.</span>
+              Quienes ya dieron{" "}
+              <span className="font-serif italic text-uc-violet">el clic.</span>
             </h2>
             <p className="mt-4 text-uc-gray text-[17px] leading-relaxed">
-              Cada parte de la experiencia está pensada para que funcione exactamente como necesitas.
+              Emprendedores reales que pasaron de mandar fotos sueltas a tener su propia vitrina online.
             </p>
           </div>
         </FadeIn>
@@ -64,7 +64,7 @@ export const ReviewsSection = () => {
                       <p className="text-[12px] text-uc-gray">{review.role}</p>
                     </div>
                   </div>
-                  <a href="#" className="text-uc-coral hover:text-uc-coral-dark transition-colors">
+                  <a href="#" className="text-uc-violet hover:text-uc-violet-dark transition-colors">
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
