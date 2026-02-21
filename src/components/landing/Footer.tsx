@@ -1,7 +1,10 @@
 import { Instagram } from "lucide-react";
 import { Logo } from "./Logo";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-uc-black text-white">
       <div className="max-w-[1040px] mx-auto px-6 py-14">
@@ -9,19 +12,19 @@ export const Footer = () => {
           <Logo dark className="mb-8" />
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-[13px] text-white/50 mb-3">
-            <a href="#funciones" className="hover:text-white transition-colors">Funciones</a>
+            <a href="#funciones" className="hover:text-white transition-colors">{t.footer.features}</a>
             <span className="text-white/20">·</span>
-            <a href="#como-funciona" className="hover:text-white transition-colors">Cómo funciona</a>
+            <a href="#como-funciona" className="hover:text-white transition-colors">{t.footer.howItWorks}</a>
             <span className="text-white/20">·</span>
-            <a href="#precios" className="hover:text-white transition-colors">Precios</a>
+            <a href="#precios" className="hover:text-white transition-colors">{t.footer.pricing}</a>
             <span className="text-white/20">·</span>
-            <a href="#contacto" className="hover:text-white transition-colors">Contacto</a>
+            <a href="#contacto" className="hover:text-white transition-colors">{t.footer.contact}</a>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-[13px] text-white/30 mb-10">
-            <a href="#" className="hover:text-white/50 transition-colors">Política de privacidad</a>
+            <a href="#" className="hover:text-white/50 transition-colors">{t.footer.privacy}</a>
             <span className="text-white/15">·</span>
-            <a href="#" className="hover:text-white/50 transition-colors">Términos y condiciones</a>
+            <a href="#" className="hover:text-white/50 transition-colors">{t.footer.terms}</a>
           </div>
 
           <div className="flex items-center gap-3 mb-8">
@@ -44,7 +47,7 @@ export const Footer = () => {
           </div>
 
           <p className="text-[12px] text-white/25">
-            © {new Date().getFullYear()} UnClic, Inc. Todos los derechos reservados.
+            © {new Date().getFullYear()} UnClic, Inc. {t.footer.copyright}
           </p>
         </div>
       </div>
