@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        serif: ["Playfair Display", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -60,18 +61,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        apple: {
-          black: "#1D1D1F",
-          gray: "#86868B",
-          light: "#F5F5F7",
-          blue: "#0071E3",
-          "blue-hover": "#0077ED",
+        uc: {
+          black: "#1A1A1A",
+          dark: "#2D2D2D",
+          gray: "#737373",
+          "gray-light": "#A3A3A3",
+          warm: "#FAF9F7",
+          "warm-mid": "#F3F0EB",
+          "warm-deep": "#EBE6DE",
+          coral: "#E05D36",
+          "coral-dark": "#CC5230",
+          "coral-soft": "#FEF5F1",
+          "coral-muted": "#F9DDD2",
         },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "calc(var(--radius) + 4px)",
+        "2xl": "calc(var(--radius) + 8px)",
       },
       keyframes: {
         "accordion-down": {
@@ -84,8 +93,8 @@ export default {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.25s ease-out",
+        "accordion-up": "accordion-up 0.25s ease-out",
       },
     },
   },

@@ -1,37 +1,47 @@
 import { FadeIn } from "@/components/FadeIn";
+import { ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <section className="pt-32 pb-6 md:pt-44 md:pb-10">
-      <div className="max-w-[980px] mx-auto px-6 text-center">
+    <section className="pt-28 pb-4 md:pt-40 md:pb-8">
+      <div className="max-w-[1040px] mx-auto px-6 text-center">
         <FadeIn>
-          <h1 className="text-[40px] sm:text-[56px] lg:text-[72px] font-semibold tracking-tight text-apple-black leading-[1.05]">
-            Vende en redes.
+          <p className="text-uc-coral font-medium text-sm tracking-wide mb-4">
+            Tu tienda online en minutos
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.05}>
+          <h1 className="text-[42px] sm:text-[56px] lg:text-[76px] font-semibold tracking-tight text-uc-black leading-[1.04]">
+            Vende en redes con
             <br />
-            <span className="text-apple-gray">Con un único link.</span>
+            <span className="font-serif italic font-medium text-uc-coral">
+              un único link.
+            </span>
           </h1>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <p className="mt-5 text-lg sm:text-xl text-apple-gray max-w-[600px] mx-auto leading-relaxed font-light">
-            Crea tu tienda online en minutos. Comparte un solo link, muestra tu
-            catálogo y recibe pedidos por WhatsApp.
+          <p className="mt-6 text-[17px] sm:text-lg text-uc-gray max-w-[540px] mx-auto leading-relaxed">
+            Crea un link, muestra tu catálogo y recibe pedidos directo
+            por WhatsApp. Sin código, sin complicaciones.
           </p>
         </FadeIn>
 
-        <FadeIn delay={0.2}>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <FadeIn delay={0.15}>
+          <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#"
-              className="inline-flex items-center px-7 py-3 text-[17px] font-medium text-white bg-apple-blue rounded-full hover:bg-apple-blue-hover transition-colors"
+              className="inline-flex items-center gap-2 px-7 py-3.5 text-[15px] font-medium text-white bg-uc-coral rounded-full hover:bg-uc-coral-dark transition-colors shadow-[0_2px_12px_rgba(224,93,54,0.3)]"
             >
-              Empezar gratis
+              Crear link gratis
+              <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#como-funciona"
-              className="inline-flex items-center px-7 py-3 text-[17px] font-medium text-apple-blue hover:underline transition-colors"
+              className="inline-flex items-center text-[15px] font-medium text-uc-black hover:text-uc-coral transition-colors"
             >
-              Conoce más &gt;
+              Ver cómo funciona
             </a>
           </div>
         </FadeIn>
