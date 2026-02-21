@@ -33,7 +33,7 @@ export const Footer = () => {
               <Instagram className="w-4 h-4" />
             </a>
             <a
-              href="https://wa.me/573332430037"
+              href="https://wa.me/573210000000"
               className="w-9 h-9 rounded-full bg-white/[0.08] flex items-center justify-center hover:bg-white/[0.15] transition-colors"
               aria-label="WhatsApp"
             >

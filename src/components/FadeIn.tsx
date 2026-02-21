@@ -27,7 +27,7 @@ export const FadeIn = ({
     <motion.div
       initial={initial}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once, margin: "-60px" }}
+      viewport={{ once, amount: 0.1 }}
       transition={{ duration: 0.5, delay, ease: [0.25, 0.1, 0.25, 1] }}
       className={className}
     >
@@ -36,10 +36,9 @@ export const FadeIn = ({
   );
 };
 
-/** Stagger wrapper: children animate in sequence */
 export const FadeInStagger = ({
   children,
-  stagger = 0.1,
+  stagger = 0.08,
   className,
 }: {
   children: ReactNode;
@@ -49,15 +48,17 @@ export const FadeInStagger = ({
   <motion.div
     initial="hidden"
     whileInView="visible"
-    viewport={{ once: true, margin: "-60px" }}
-    variants={{ visible: { transition: { staggerChildren: stagger } } }}
+    viewport={{ once: true, amount: 0.05 }}
+    variants={{
+      hidden: {},
+      visible: { transition: { staggerChildren: stagger } },
+    }}
     className={className}
   >
     {children}
   </motion.div>
 );
 
-/** Use inside FadeInStagger */
 export const FadeInItem = ({
   children,
   className,
@@ -67,8 +68,12 @@ export const FadeInItem = ({
 }) => (
   <motion.div
     variants={{
-      hidden: { opacity: 0, y: 20 },
-      visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
+      hidden: { opacity: 0, y: 16 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] },
+      },
     }}
     className={className}
   >

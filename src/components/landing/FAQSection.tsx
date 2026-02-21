@@ -55,13 +55,13 @@ export const FAQSection = () => {
                 Si no encuentras tu respuesta acá, escríbenos. Contestamos rápido y en español.
               </p>
               <a
-                href="https://wa.me/573332430037"
+                href="https://wa.me/573210000000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium text-[14px] transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
-                WhatsApp: +57 333 243 0037
+                WhatsApp: +57 321 000 0000
               </a>
             </FadeIn>
           </div>
